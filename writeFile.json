@@ -1,0 +1,50 @@
+[
+ [
+  {
+   "describe": "New basic test",
+   "it_block": "should return 200 on success",
+   "test_state": "passed",
+   "test_duration": 2015
+  }
+ ],
+ [
+  {
+   "describe": "New basic test",
+   "it_block": "should specify success in the response 'this' field",
+   "test_state": "passed",
+   "test_duration": 1
+  }
+ ],
+ [
+  {
+   "describe": "New basic test",
+   "it_block": "should respond with the created dweet's data",
+   "test_state": "passed",
+   "test_duration": 0
+  }
+ ],
+ [
+  {
+   "describe": "New basic test",
+   "it_block": "should use a dweet thing name if provided",
+   "test_state": "passed",
+   "test_duration": 0
+  }
+ ],
+ [
+  {
+   "describe": "New basic test",
+   "it_block": "should allow retrieval of the last data point",
+   "test_state": "passed",
+   "test_duration": 1571
+  }
+ ],
+ [
+  {
+   "describe": "New basic test",
+   "it_block": "should respond with data matching the dweet schema",
+   "test_state": "passed",
+   "test_duration": 4
+  }
+ ]
+]

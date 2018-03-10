@@ -1,9 +1,9 @@
 var chakram = require('chakram'),
     expect = chakram.expect;
-    var Mocha = require('mocha')
-    var mocha = new Mocha({
-        reporter: 'mochawesome'
-      });
+
+var fs = require('fs');
+var jsonResults = [];
+
 
 describe("New basic test", function () {
     before("Initializing headers", function () {
@@ -21,7 +21,7 @@ describe("New basic test", function () {
    
     });
 
-    afterEach("Log test result", function () {
+    afterEach("Get test result", function () {
         var logger = [
         {
             "describe": this.currentTest.parent.title,
@@ -30,6 +30,16 @@ describe("New basic test", function () {
             "test_duration": this.currentTest.duration
         }]
 
+        jsonResults.push(logger)
+
+    })
+
+    after("Log test result to file", function () {
+        fs.writeFile("writeFile.json", JSON.stringify(jsonResults, null, 1), function (err,data) {
+            if (err) {
+                throw err;
+            }
+        })
     })
 
 
